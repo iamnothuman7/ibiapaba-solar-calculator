@@ -1,46 +1,29 @@
-# ⚡ Calculadora de Economia - Associação Ibiapaba Solar
+# Ibiapaba Solar Calculator
 
-![Ibiapaba Solar](logo.png)
+Versão do simulador de economia da Associação Ibiapaba Solar em HTML, CSS e JavaScript. O arquivo de entrada desta versão é `deepseek_html_20251125_f7da2f.html`, e não `index.html`.
 
-## 🌟 Sobre o Projeto
+Para uma versão com entrada convencional e link de demonstração, consulte [ibiapaba-solar](https://github.com/iamnothuman7/ibiapaba-solar). Os dois repositórios permanecem separados para preservar seus históricos.
 
-Calculadora online desenvolvida para a **Associação Ibiapaba Solar** que permite aos usuários simularem economia real na conta de energia através do sistema de compensação de energia solar compartilhada.
+## Recursos
 
-**🔗 Site Online:** [https://ibiapabasolar.netlify.app](https://ibiapabasolar.netlify.app)
+- Entrada por valor da fatura ou consumo em kWh.
+- Comparação entre valores calculados com tarifas fixadas no código.
+- Interface adaptável e link de contato com a simulação pelo WhatsApp.
 
-## 🎯 Funcionalidades
+O código implementa a expressão `(Cmc - Cgd) × 0,8` e constantes de tarifa e iluminação. Esses parâmetros não são atualizados por uma API. A demonstração não garante economia real nem substitui a conferência comercial e técnica dos valores.
 
-### 💰 Cálculos Precisos
-- **Simulação realista** baseada no Estatuto Social da associação
-- **Fórmula do Artigo 21º**: `Valor = [(Cmc - Cgd) × 0,8]`
-- **Tarifas atualizadas** do mercado cativo e geração distribuída
-- **Cálculo automático** de CIP e custos de disponibilidade
+## Executar localmente
 
-### 📱 Experiência do Usuário
-- **Interface responsiva** para mobile e desktop
-- **Duas opções de entrada**: valor da fatura ou consumo em kWh
-- **Resultados detalhados** com comparação lado a lado
-- **Design moderno** com degradê verde e animações suaves
+```sh
+git clone https://github.com/iamnothuman7/ibiapaba-solar-calculator.git
+cd ibiapaba-solar-calculator
+python -m http.server 8000 --bind 127.0.0.1
+```
 
-### 🔗 Integração com WhatsApp
-- **Botão direto** para contato comercial
-- **Mensagem automática** com dados da simulação
-- **Lead qualificado** com informações completas
+Abra `http://127.0.0.1:8000/deepseek_html_20251125_f7da2f.html`. O arquivo `logo.png` deve permanecer ao lado do HTML.
 
-## 🛠️ Tecnologias Utilizadas
+## Validação e uso
 
-- **HTML5** - Estrutura semântica
-- **CSS3** - Design moderno com Glassmorphism
-- **JavaScript** - Cálculos e interatividade
-- **GitHub Pages** - Hospedagem gratuita
-- **Netlify** - Deploy contínuo
+Não há testes automatizados. Confira entradas inválidas, parâmetros do cálculo, contato comercial e layout em celular antes de reutilizar. A URL raiz de uma hospedagem estática não deve ser anunciada como demonstração sem configurar uma página de entrada.
 
-## 📊 Como Funcionam os Cálculos
-
-### 🧮 Fórmula Base
-```javascript
-Valor Contribuição = [(Cmc - Cgd) × 0,8]
-
-Onde:
-- Cmc = (Consumo × 0,9727) + 140,06
-- Cgd = [(Consumo × 0,9727) - (Créditos × 0,7392)] + 140,06
+Não há licença de redistribuição declarada. Marcas e materiais da associação não são liberados para uso por este README.
